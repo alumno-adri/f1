@@ -1,0 +1,278 @@
+/* nuestro root html tiene un font-size de 16px por defecto
+ equivalente a 1rem. rem es medida con respecto a root (html) 
+Utilizar rem para fuente pues se adapta a las distintas resoluciones */
+
+/* Solo si para páginas fullscreen sin barra de desplamiento */
+
+
+/* Definición de la fuente local */
+@font-face {
+    font-family: "fontf1";
+    src: url(../font/fontf1.woff2);
+}
+
+/* Tamaño de la caja de borde a borde 
+padding y borde no modifica el tamaño del elemento */
+* {
+    box-sizing: border-box;
+}
+
+/* Reglas comunes a todos los elementos en body 
+margin:0 para quitar ese pequeño enmarcado blanco indeseable */
+body {
+    margin: 0;
+    font-family: "fontf1";
+}
+.container {    
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+header {
+    background-color: red;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+}
+
+main {
+    margin-top: 100px ;
+    margin-bottom: 40px;
+}
+.titulo{
+    font-size: 3.875rem;
+}
+footer {  
+    background-color: #38383fd8;
+    padding: 10px 20px;
+    color:white;
+}
+
+/* flex orientación row */
+.row {
+    display: flex;
+}
+.flex-wrap{
+    flex-wrap:wrap ;
+}
+/* flex orientación column */
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Alineación eje principal center */
+.justify-content-center {
+    justify-content: center;
+}
+
+/* Alineación eje principal space beetween 
+si row = 1º y ultimo en izq y der resto reparten espacio
+si column =  1º y ultimo en arriba y abajo resto reparten espacio */
+.justify-content-between {
+    justify-content: space-between;
+}
+
+/* Alineación eje principal end
+si row = derecha
+si column = abajo */
+.justify-content-end {
+    justify-content: end;
+}
+
+/* Alineación eje secundario center 
+si row = centrado verticalmente
+si column = centrado horizontalmente */
+.align-items-center {
+    align-items: center;
+}
+
+.col-50 {
+    width: 50%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.p-0 {
+    padding: 0;
+}
+.p-b{
+    padding-bottom: 50px;
+}
+/* Flotación */
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+/* limpiar flotación */
+.cb {
+    clear: both;
+}
+
+/* Position */
+.position-absolute {
+    position: absolute;
+}
+
+.position-relative {
+    position: relative;
+}
+
+/* Alineación del Texto centro */
+.text-center {
+    text-align: center;
+}
+
+/* Alineación del Texto derecha */
+.text-end {
+    text-align: end;
+}
+
+/* Fondo y texto negro y blanco */
+.bg-black {
+    background-color: black;
+}
+
+.text-black {
+    color: black;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.text-white {
+    color: white;
+}
+
+.border{
+    border: 2px solid;
+    border-bottom: 5px;
+    border-width: px;
+    border-left: 5px;
+    border-top-right-radius:20px;
+    width: 50%;
+    
+}
+.border1{
+    border: 10px solid;
+    border-bottom: 8px;
+    border-left: 8px;
+    border-top-right-radius:20px;
+}
+.p-background{
+    background-color: #f3f3f3;
+    padding: 8px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+.letra-normal{
+    font-family: "Titillium";
+}
+.bor1{
+    border: 100px;
+}
+
+.col-2{
+    width: 50%;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.card{
+    position: relative;
+
+}
+.letra-pequeña{
+    font-size: small;
+}
+.pa-left{
+    padding-left: 100px;
+}
+.pa-0{
+    padding-right: 1;
+}
+.btn1{
+    border-radius: 5px ;
+    border-color: black;
+    border-width: 2px;
+    border: 2px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.app-download{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.app-download p{
+    margin: 0;
+    font-size: .8125rem;
+    line-height: .9140625rem;    
+    font-family: "Titillium";
+    text-transform: uppercase;
+    width: 110px;
+  letter-spacing: 0.2px;
+  align-content: center;
+}
+.social-icons a {
+    text-decoration: none;
+    color:white;
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-direction: row;
+    border-color: black;
+    border: 0 solid;
+    color: white;
+}
+
+.social-icons a:hover {
+    background-color: #16161f;
+    transition-duration: .2s;
+}
+.rallas{
+    inset: 0;
+    background-size: 12px;
+    background-image: url(../img/carbon-stripe-x2.avif);
+    width: 100%;
+    border-radius: 10px;
+    height: 90px;
+    margin-top: 20px;
+    opacity: 0.5;
+}
+h3{
+    font-size: 14px;
+}
+strong{
+    font-size: 16px;
+}
+.like{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin: 10px;
+}
